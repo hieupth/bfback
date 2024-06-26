@@ -11,6 +11,7 @@ on:
       - '*.py'
       - 'run.dockerfile'
       - 'resources/*'
+      - 'blueforest/*'
 
 jobs:
   build:

@@ -9,6 +9,6 @@ RUN apt-get update -y && \
     cd resources && wget https://huggingface.co/hieupth/blueforest/resolve/main/facedet.onnx
 RUN ls -la resources && \
     source /venv/bin/activate && \
-    pip install git+https://github.com/hieupth/blueforest && \
+    pip install git+https://github.com/hieupth/bfback && \
     python warmup.py
 ENTRYPOINT source /venv/bin/activate && uvicorn blueforest.api:app --host 0.0.0.0 --port 8080
