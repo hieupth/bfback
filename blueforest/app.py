@@ -18,7 +18,7 @@ for i in range(1, 6):
 #
 customcap = Image.open(os.environ.get('CUSTOM_CAP_IMAGE', os.path.join(os.getcwd(), 'resources', 'customcaption.png')))
 #
-font = ImageFont.truetype(os.environ.get('FONT', os.path.join(os.getcwd(), 'resources', 'fonts', 'SVN-GOTHAM BOLD.TTF')), 70)
+font = ImageFont.truetype(os.environ.get('FONT', os.path.join(os.getcwd(), 'resources', 'fonts', 'DTPHUDU-BOLD.OTF')), 100)
 
 
 def run(image, caption = None):
@@ -72,7 +72,7 @@ def run(image, caption = None):
     h, w = merged.height, merged.width
     for i in range(0, len(_caps)):
       draw = ImageDraw.Draw(merged)
-      draw.text((50, int(h * 0.6 + i * 80)), _caps[i], (255, 255, 255), font=font)
+      draw.text((50, int(h * 0.56 + i * 100)), _caps[i], (255, 255, 255), font=font)
   merged = merged.convert('RGB')
   # merged.show()
   return merged
